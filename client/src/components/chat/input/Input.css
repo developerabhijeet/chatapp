@@ -8,8 +8,9 @@
   border: none;
   border-radius: 0;
   padding: 5%;
-  width: 80%;
+  width: 70%;
   font-size: 1.2em;
+  height: 40%;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -20,9 +21,10 @@ input:focus, textarea:focus, select:focus{
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: #2979FF;
-  padding: 20px;
+  background: black;
+  padding: 10px;
   display: inline-block;
   border: none;
   width: 20%;
+  height: 49px;
 }

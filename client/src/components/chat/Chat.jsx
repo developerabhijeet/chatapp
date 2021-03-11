@@ -4,7 +4,7 @@ import {Link, useParams} from 'react-router-dom';
 import io from 'socket.io-client';
 import Messages from './messages/Messages';
 import Input from './input/Input';
-Input
+import './Chat.css';
 let socket;
 
 const Chat = () => {
@@ -16,7 +16,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   useEffect(()=>{
     socket = io(ENDPT);
-    socket.emit('join',{name:user.name, room_id, user_id: user.id});
+    socket.emit('join',{name:user.name, room_id, user_id: user._id});
     
 },[])
 useEffect(()=>{
@@ -35,7 +35,7 @@ const sendMessage = event =>{
     <div className="outerContainer">
       <div className="container">
       
-     <Messages messages={messages} user_id={user.id}/>
+     <Messages messages={messages} user_id={user._id}/>
       <Input
       message={message}
       setMessage = {setMessage}
